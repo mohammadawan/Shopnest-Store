@@ -1,0 +1,48 @@
+# ===== NODE MODULES =====
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# ===== ENVIRONMENT FILES =====
+.env
+.env.local
+.env.development
+.env.production
+client/.env
+server/.env
+
+# ===== BUILD FOLDERS =====
+build/
+client/build/
+dist/
+server/dist/
+
+# ===== LOGS =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== OS FILES =====
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+# ===== EDITOR FILES =====
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ===== CACHE =====
+.cache/
+.npm/
+.eslintcache
+
+# ===== UPLOADS (agar local images save hoti hain) =====
+server/uploads/
+client/public/uploads/

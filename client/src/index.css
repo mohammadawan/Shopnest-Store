@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ─────────────────────────────────── */
+@layer base {
+  * { @apply box-border; }
+  body {
+    @apply font-sans bg-gray-50 text-gray-900 antialiased;
+  }
+  .dark body { @apply bg-gray-950 text-gray-100; }
+  h1,h2,h3,h4,h5,h6 { @apply font-display; }
+  ::-webkit-scrollbar       { @apply w-1.5; }
+  ::-webkit-scrollbar-track { @apply bg-gray-100; }
+  ::-webkit-scrollbar-thumb { @apply bg-gray-400 rounded-full; }
+}
+
+/* ── Components ───────────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-gray-900 font-semibold px-5 py-2.5 rounded-lg
+           hover:bg-primary-dark active:scale-95 transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-amazon-nav text-white font-semibold px-5 py-2.5 rounded-lg
+           hover:bg-amazon-light active:scale-95 transition-all duration-200;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-5 py-2.5 rounded-lg
+           hover:bg-primary hover:text-gray-900 active:scale-95 transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  .dark .card { @apply bg-gray-800; }
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg text-sm
+           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
+           transition-all duration-200 bg-white;
+  }
+  .dark .input-field { @apply bg-gray-700 border-gray-600 text-white; }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .skeleton {
+    @apply bg-gray-200 animate-pulse rounded;
+  }
+  .dark .skeleton { @apply bg-gray-700; }
+  .section-title {
+    @apply text-2xl md:text-3xl font-display font-bold text-gray-900;
+  }
+  .dark .section-title { @apply text-white; }
+}
+
+/* ── Star Rating ──────────────────────────── */
+.star-rating {
+  color: #FF9900;
+}
+
+/* ── Swiper ───────────────────────────────── */
+.hero-slide {
+  background: linear-gradient(135deg, #131921 0%, #232F3E 100%);
+}
+
+/* ── Price Tag ────────────────────────────── */
+.price-tag::before {
+  content: '₨ ';
+}
+
+/* ── Scrollbar hide ───────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }
